@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Factory Buttons -->
+            <Button
+                android:id="@+id/buttonFactory1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Factory 1" />
+
+            <Button
+                android:id="@+id/buttonFactory2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Factory 2" />
+
+            <Button
+                android:id="@+id/buttonFactory3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Factory 3" />
+
+            <!-- Add more buttons as needed -->
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/textViewFactoryLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/horizontalScrollView"
+        android:text="Factory 2"
+        android:textSize="24sp"
+        android:layout_margin="16dp" />
+
+    <!-- Dashboard displaying sensor readings -->
+    <LinearLayout
+        android:id="@+id/dashboardLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewFactoryLabel"
+        android:orientation="vertical"
+        android:layout_margin="16dp">
+
+        <!-- Sensor readings and other details go here -->
+        <TextView
+            android:id="@+id/textViewSensorReading1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sensor 1: 0.0"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textViewSensorReading2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sensor 2: 0.0"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textViewSensorReading3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sensor 3: 0.0"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textViewSensorReading4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sensor 4: 0.0"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textViewTotalPower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Power: 1549.7 kW"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp" />
+
+        <TextView
+            android:id="@+id/textViewTimestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Timestamp: 2022-01-01 12:00:00"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+
+    <!-- Bottom Navigation Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@android:color/darker_gray"
+        android:padding="8dp">
+
+        <Button
+            android:id="@+id/buttonEngineers"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Engineers" />
+
+        <Button
+            android:id="@+id/buttonDashboard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Dashboard" />
+
+        <Button
+            android:id="@+id/buttonSettings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Settings" />
+
+    </LinearLayout>
+</RelativeLayout>
